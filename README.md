@@ -20,3 +20,6 @@ Send Messages
 Embed Links  
 Attach Files  
 Mention @everyone, @here, and All Roles  
+
+## Privacy
+Nothing is every logged or recorded. Please review the source code for any privacy concerns.  
