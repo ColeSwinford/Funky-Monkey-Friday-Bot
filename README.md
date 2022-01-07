@@ -1,5 +1,5 @@
 # Funky-Monkey-Friday-Bot
-A Discord bot that alerts your server when it's Funky Monkey Friday!
+An open-source Discord bot that alerts your server when it's Funky Monkey Friday!
 
 ## !help (how to use the bot)
 !config timezone - configure timezone (default is UTC)  
