@@ -11,7 +11,7 @@ A Discord bot that alerts your server when it's Funky Monkey Friday!
 !setting - displays alert time and timezone configuration  
 Only users with admin permissions can use commands  
 
-## Require permissions
+## Required permissions
 View Channels  
 Send Messages  
 Embed Links  
