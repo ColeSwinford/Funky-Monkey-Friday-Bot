@@ -9,7 +9,7 @@ Add it to your server here! https://discord.com/api/oauth2/authorize?client_id=9
 !config - configure Funky Monkey Friday alerts  
 !list timezones - lists all timezones  
 Commands timeout after 2 minutes  
-`Only users with admin permissions can use commands`  
+Only users with admin permissions can use commands  
 
 ## Required permissions
 View Channels  
