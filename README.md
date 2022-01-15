@@ -1,5 +1,5 @@
 # Funky-Monkey-Friday-Bot
-An open-source Discord bot that alerts your server when it's Funky Monkey Friday!
+An open-source Discord bot that automatically alerts your server when it's Funky Monkey Friday!
 Add it to your server here! https://discord.com/api/oauth2/authorize?client_id=927716084944076810&permissions=183296&scope=bot
 
 ![Funkey Monkey Friday Bot](https://user-images.githubusercontent.com/19520329/148521703-a8c1fdb6-7352-4579-aca1-e60f80ffe477.png)
