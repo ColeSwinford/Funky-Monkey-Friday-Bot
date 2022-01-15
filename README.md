@@ -6,9 +6,7 @@ Add it to your server here! https://discord.com/api/oauth2/authorize?client_id=9
 
 ## !help (how to use the bot)
 !test - preview an alert without tagging everyone  
-!config - configure Funky Monkey Friday alerts  
-!list timezones - lists all timezones  
-Commands timeout after 2 minutes  
+Your next alert will issued on the following Funky Monkey Friday!  
 Only administrators can use commands  
 
 ## Required permissions
