@@ -99,7 +99,7 @@ async def on_message(message):
           # weekday() == 4 would be Friday
           ## check if the day and time are equal the configuration
           if datetime.datetime.now(tz=pytz.timezone(ZoneSelection)).weekday() == 4 and datetime.datetime.now(tz=pytz.timezone(ZoneSelection)).hour == h and datetime.datetime.now(tz=pytz.timezone(ZoneSelection)).minute ==  m:
-            MonkeyTime()
+            # MonkeyTime() function is called and the alert is sent
             await message.channel.send("@everyone **IT'S FUNKY MONKEY FRIDAY! SEIZE THE DAY!**", file=discord.File("FunkyMonkeyGifs/" + MonkeyTime()))
             time.sleep(60)
             print("Sent!")
