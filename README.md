@@ -1,5 +1,5 @@
 # Funky-Monkey-Friday-Bot 
-Note: Currently experiencing hosting reliability issues, will be moving to a dedicate raspberry pi soon
+Note: Currently experiencing hosting reliability issues, will be moving to a dedicated Raspberry Pi soon
 
 An open-source, configurable Discord bot that alerts your server when it's Funky Monkey Friday!  
 
