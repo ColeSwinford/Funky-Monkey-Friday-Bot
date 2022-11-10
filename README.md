@@ -23,3 +23,6 @@ Mention @everyone, @here, and All Roles
 
 ## Privacy
 Nothing is ever logged or recorded. Please review the source code for any privacy concerns.  
+
+## Other
+I own no images/videos/gifs used by this bot.
