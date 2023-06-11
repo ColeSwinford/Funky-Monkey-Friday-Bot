@@ -9,6 +9,10 @@ import pytz
 
 print(datetime.datetime.now())
 
+# Global alert vars
+defaultActivate = False
+defaultFunc = ''
+
 # 8MB is the API limit for sent files
 # Finds a random monkey gif from the FunkyMonkeyGifs folder
 def MonkeyTime():
@@ -28,6 +32,9 @@ async def on_ready():
 # All functionality begins when a message is sent
 @client.event
 async def on_message(message):
+  # global vars
+  global defaultActivate
+  global defaultFunc
 
   # if the sender is the bot, return
   if message.author == client.user:
@@ -36,9 +43,29 @@ async def on_message(message):
   # if the sender is a server admin, listen for commands
   if message.author.guild_permissions.administrator == True:
 
+    # default alert loop
+    if(defaultActivate == False):
+      # Default alert loop
+      @tasks.loop(seconds=5.0)
+      async def defaultAlert():
+        # weekday() == 4 would be Friday
+        ## check if the day and time are equal the configuration
+        if datetime.datetime.now(tz=pytz.timezone('UTC')).weekday() == 4 and datetime.datetime.now(tz=pytz.timezone('UTC')).hour == 8 and datetime.datetime.now(tz=pytz.timezone('UTC')).minute ==  0:
+          # MonkeyTime() function is called and the alert is sent
+          await message.channel.send("@everyone **IT'S FUNKY MONKEY FRIDAY! SEIZE THE DAY!**", file=discord.File("FunkyMonkeyGifs/" + MonkeyTime()))
+          time.sleep(60)
+          print("Sent!")
+        print('Day: {}'.format(datetime.datetime.now(tz=pytz.timezone('UTC')).weekday()))
+        print('Time: {}'.format(datetime.datetime.now(tz=pytz.timezone('UTC'))))
+        print('alerts are active for {}:{}, {}'.format(8, 0, 'UTC'))
+      defaultFunc = defaultAlert
+      defaultFunc.start()
+      # defaultAlert.start()
+      defaultActivate = True
+
     # help command
     if message.content.startswith('!help'):
-      await message.channel.send("**You have requested Funky Monkey Assistance**\n!test - preview an alert without tagging everyone\n!config - configure Funky Monkey Friday alerts\n!list timezones - lists all timezones\nCommands timeout after 2 minutes\n`Only administrators can use commands`")
+      await message.channel.send("**You have requested Funky Monkey Assistance**\nDefault alert time is set to 8:00AM UCT\n!test - preview an alert without tagging everyone\n!config - configure Funky Monkey Friday alerts\n!list timezones - lists all timezones\nCommands timeout after 2 minutes\n`Only administrators can use commands`")
 
     # test command
     if message.content.startswith('!test'):
@@ -96,6 +123,7 @@ async def on_message(message):
       # show the user their configuration
       await message.channel.send("You're next Funky Monkey Friday alert is scheduled for {}:{}, {} on the next Friday".format(h, m, ZoneSelection))
       if h != 'undef' and m != 'undef' and ZoneSelection != 'undef':
+        defaultFunc.stop()
         @tasks.loop(seconds=5.0)
         async def alerts():
           # weekday() == 4 would be Friday
