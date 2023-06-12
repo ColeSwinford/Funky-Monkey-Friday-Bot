@@ -46,7 +46,7 @@ async def on_message(message):
     # default alert loop
     if(defaultActivate == False):
       # Default alert loop
-      @tasks.loop(seconds=5.0)
+      @tasks.loop(seconds=59.0)
       async def defaultAlert():
         # weekday() == 4 would be Friday
         ## check if the day and time are equal the configuration
@@ -124,7 +124,7 @@ async def on_message(message):
       await message.channel.send("You're next Funky Monkey Friday alert is scheduled for {}:{}, {} on the next Friday".format(h, m, ZoneSelection))
       if h != 'undef' and m != 'undef' and ZoneSelection != 'undef':
         defaultFunc.stop()
-        @tasks.loop(seconds=5.0)
+        @tasks.loop(seconds=59.0)
         async def alerts():
           # weekday() == 4 would be Friday
           ## check if the day and time are equal the configuration
