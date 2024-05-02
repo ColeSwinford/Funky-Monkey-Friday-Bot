@@ -1,5 +1,4 @@
 # Funky-Monkey-Friday-Bot 
-## Status: Searching for better hosting alternative
 
 An open-source, configurable Discord bot that alerts your server when it's Funky Monkey Friday!  
 
