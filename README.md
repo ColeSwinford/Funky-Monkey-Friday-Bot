@@ -1,4 +1,5 @@
-# Funky-Monkey-Friday-Bot 
+# Funky-Monkey-Friday-Bot
+## Note: paused hosting, but can still be self hosted
 
 An open-source, configurable Discord bot that alerts your server when it's Funky Monkey Friday!  
 
